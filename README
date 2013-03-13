@@ -1,0 +1,16 @@
+*** WHAT IS THIS? ***
+
+Well, I don't know it at all...
+It was a quick idea of a network application in C language. Working with sockets and serialization and stuff, you know.
+
+
+*** WHAT DOES THIS? ***
+
+A client can either be a "initial" client, so called the first one in the circle. Or it can be a "slave", which can connect to any other client in the circle.
+Once a client recieves the "loop-package", it parses the IP/port list from the package and tries to connect to the first client listet in that list. If the connection succeeds, the client will repack the list (adding itself at the end) and send the package again.
+This way, an infinitly big loop can be created and every client knows any other IP address.
+
+
+*** You were bored, right? ***
+
+Yes, I was.
